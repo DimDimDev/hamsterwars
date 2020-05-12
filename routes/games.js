@@ -3,6 +3,26 @@ const { db } = require('../firebase')
 
 let router = new Router();
 
+
+//Test
+router.get('/test', async (req, res) => {
+    try {
+        let hamstersArray = [];
+        let hamstersDB = await db.collection('hamsters').get();
+
+        hamstersDB.forEach(hamster => {
+            hamstersArray.push(hamster.data());
+        })
+
+        res.status(200).send({ msg: "test", hamstersArray })
+
+    } catch (err) {
+        res.status(500)
+        console.error(err)
+    }
+})
+
+
 //Returns all games
 router.get('/', async (req, res) => {
     try {

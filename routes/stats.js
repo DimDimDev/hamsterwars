@@ -3,6 +3,7 @@ const { db } = require('../firebase')
 
 let router = new Router();
 
+
 // GET /stats/total
 //Returnerar ett statsobject med totalt antal matcher som hållits.
 

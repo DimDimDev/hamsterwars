@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-const { auth, db } = require('./firebase')
 
 app.use(express.json());
 

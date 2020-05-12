@@ -3,7 +3,8 @@ const { db } = require('../firebase')
 
 let router = new Router();
 
-//Returnerar en array med top 5 mest vinnande hamsterobject
+
+//Returns top 5 winners
 router.get('/top', async (req, res) => {
     try {
         let hamstersArray = [];
@@ -22,7 +23,7 @@ router.get('/top', async (req, res) => {
 })
 
 
-//Returnerar en array med top 5 mest förlorande hamsterobject.
+//Returns bottom 5 losers
 router.get('/bottom', async (req, res) => {
     try {
         let hamstersArray = [];
