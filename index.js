@@ -4,6 +4,7 @@ const app = express();
 app.use(express.json());
 
 //Static route to assets
+app.use('/', express.static('public'))
 app.use('/assets', express.static('assets'))
 
 //Routes imports
